@@ -20,7 +20,7 @@ To start a simulation you need to send a JSON request to `https://dianti.de.r.ap
 | Field | Type | Description |
 | :---- | :--- | :---------- |
 | bot | string | The name of your bot |
-| building_name | string | The name of the building simulation, which can be seleted from [here](https://dianti.de.r.appspot.com/buildings) |
+| building\_name | string | The name of the building simulation, which can be seleted from [here](https://dianti.de.r.appspot.com/buildings) |
 | email | string | Your email (this is used to generate a [Gravatar](https://gravatar.com/) image to show in the high scores) |
 | event | string | The name of the event (this is so each event can have a separate high score board) |
 | sandbox | boolean | If sandbox is set to true then your simulation will not be included in high scores or replays |
@@ -43,13 +43,13 @@ If your request is valid then you will receive back a response with a subset of 
 
 | Field | Type | Description | When Returned |
 | :---- | :--- | :---------- | :------------ |
-| cur_turn | boolean | The current turn number | Every turn |
+| cur\_turn | boolean | The current turn number | Every turn |
 | elevators | list[[Elevator](#elevator-type)] | The current state of the elevators | Every turn |
 | errors | list[string] | A list of any errors encountered | Every turn |
-| num_floors | int | The number of floors in this building | The initial turn |
-| num_turns | int | The number of turns this simulation will last. | The initial turn |
+| num\_floors | int | The number of floors in this building | The initial turn |
+| num\_turns | int | The number of turns this simulation will last. | The initial turn |
 | requests | list[[Request](#request-type)] | Passenger requests for the elevator | Every turn |
-| replay_url | string | A link to a replay of this simulation | The final turn |
+| replay\_url | string | A link to a replay of this simulation | The final turn |
 | running | boolean | Whether the simulation is still running | Every turn and for the final turn this will be false |
 | score | int | The score for your simulation | The final turn |
 | token | string | This identifies the simulation and must be sent with all future requests | The initial turn |
@@ -58,7 +58,7 @@ Here are the fields for the `Elevator` type:
 <a name="elevator-type"></a> 
 | Field | Type | Description |
 | :---- | :--- | :---------- |
-| buttons_pressed | list[int] | The floors requested by passengers in the elevator |
+| buttons\_pressed | list[int] | The floors requested by passengers in the elevator |
 | floor | int | The current floor of the elevator |
 | id | string | The ID of the elevator |
 
@@ -99,7 +99,7 @@ Here are the fields required for each `Command`:
 | :---- | :--- | :---------- |
 | action | boolean | The action for the elevator, with `true` to move and `false` to stop. When stopped passengers at that floor will only board if the elevator is heading in their direction. |
 | direction | boolean | The direction to send the elevator, with true for up and false for down. |
-| elevator_id | string | The ID of the elevator this command is for. |
+| elevator\_id | string | The ID of the elevator this command is for. |
 
 Here is an example command request that has `elevator_1` stopped on the way up and `elevator_2` moving down:
 ```
