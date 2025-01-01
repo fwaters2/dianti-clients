@@ -20,7 +20,7 @@ To start a simulation you need to send a JSON request to `https://dianti.de.r.ap
 | Field | Type | Description |
 | :---- | :--- | :---------- |
 | bot | string | The name of your bot |
-| building\_name | string | The name of the building simulation, which can be seleted from [here](https://dianti.de.r.appspot.com/buildings) |
+| building\_name | string | The name of the building simulation, which can be selected from [here](https://dianti.de.r.appspot.com/buildings) |
 | email | string | Your email (this is used to generate a [Gravatar](https://gravatar.com/) image to show in the high scores) |
 | event | string | The name of the event (this is so each event can have a separate high score board) |
 | sandbox | boolean | If sandbox is set to true then your simulation will not be included in high scores or replays |
