@@ -1,13 +1,14 @@
-from api import ElevatorSimulation, UP, DOWN, MOVE, STOP
+from api import Command, Simulation, UP, DOWN, MOVE, STOP
 
 
 def updown_bot():
     """An example bot that sends elevators up and down and stops at floors if there are passengers waiting to get on or off"""
-    simulation = ElevatorSimulation(
+    simulation = Simulation(
         event="secondspace2025",
         building_name="tiny_random",
         bot="updown",
         email="bob@mail.com",
+        sandbox=True,
     )
     current_state = simulation.initial_state
     directions = {}  # current directions of elevators
@@ -37,11 +38,7 @@ def updown_bot():
                         # someone requested the current floor
                         action = STOP
             commands.append(
-                {
-                    "elevator_id": elevator["id"],
-                    "direction": direction,
-                    "action": action,
-                }
+                Command(elevator_id=elevator["id"], direction=direction, action=action)
             )
 
         current_state = simulation.send(commands)

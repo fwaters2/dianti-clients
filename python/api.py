@@ -1,11 +1,26 @@
 import requests
+from dataclasses import dataclass
 
 
 DIRECTIONS = UP, DOWN = True, False
 ACTIONS = MOVE, STOP = True, False
 
 
-class ElevatorSimulation:
+@dataclass
+class Command:
+    elevator_id: str
+    direction: bool
+    action: bool
+
+    def json(self):
+        return {
+            "elevator_id": self.elevator_id,
+            "direction": self.direction,
+            "action": self.action,
+        }
+
+
+class Simulation:
     """An interface to the elevator simulator."""
 
     def __init__(
@@ -30,14 +45,14 @@ class ElevatorSimulation:
         self.num_floors: int = self.initial_state["num_floors"]
         self.cur_turn: int = 0
 
-    def send(self, commands: list[dict]) -> dict:
+    def send(self, commands: list[Command]) -> dict:
         """Send commands and returns the new state of the elevator system"""
         self.cur_turn += 1
         print("Turn:", self.cur_turn)
         return self.api(
             {
                 "token": self.initial_state["token"],
-                "commands": commands,
+                "commands": [command.json() for command in commands],
             }
         )
 

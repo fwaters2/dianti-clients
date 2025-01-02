@@ -1,24 +1,25 @@
 import random
 
-from api import ElevatorSimulation, DIRECTIONS, ACTIONS
+from api import Command, Simulation, DIRECTIONS, ACTIONS
 
 
 def random_bot():
     """A simple bot that will randomly move and stop"""
-    simulation = ElevatorSimulation(
+    simulation = Simulation(
         event="secondspace2025",
         building_name="tiny_random",
         bot="random",
         email="bob@mail.com",
+        sandbox=True,
     )
     current_state = simulation.initial_state
     while current_state["running"]:
         commands = [
-            {
-                "elevator_id": elevator["id"],
-                "direction": random.choice(DIRECTIONS),
-                "action": random.choice(ACTIONS),
-            }
+            Command(
+                elevator_id=elevator["id"],
+                direction=random.choice(DIRECTIONS),
+                action=random.choice(ACTIONS),
+            )
             for elevator in current_state["elevators"]
         ]
         current_state = simulation.send(commands)
