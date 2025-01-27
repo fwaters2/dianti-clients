@@ -117,10 +117,12 @@ Your bot will then receive back the response described in the [API Response](#ap
 
 ### Score
 
-In the final turn you will receive a score for your simulation based on:
+You will receive a score for your simulation based on three areas:
 
-- The time it took each passenger to reach their destination floor.
-- How many passengers did not reach their destination by the end of the simulation.
-- The amount of energy used to move elevators.
+| Description | Score |
+| :---------- | :--- |
+| Passenger who reaches their destination. | 100 - 1 x number of turns waiting | 
+| Passenger who has not reached their destination at the end of the simulation. | -20 - 1 x number of turns waiting |
+| Elevator energy used. | -1 x amount of movement |
 
 The highest scoring bots will be displayed on the [high scores](https://dianti.secondspace.dev/highscores) page.
