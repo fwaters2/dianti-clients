@@ -6,7 +6,7 @@ def updown_bot():
     simulation = Simulation(
         event="secondspace2025",
         building_name="tiny_random",
-        bot="updown",
+        bot="updown-python-bot",
         email="bob@mail.com",
         sandbox=True,
     )

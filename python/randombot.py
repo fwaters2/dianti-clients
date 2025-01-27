@@ -8,7 +8,7 @@ def random_bot():
     simulation = Simulation(
         event="secondspace2025",
         building_name="tiny_random",
-        bot="random",
+        bot="random-python-bot",
         email="bob@mail.com",
         sandbox=True,
     )
