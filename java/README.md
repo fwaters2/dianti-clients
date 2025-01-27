@@ -1,8 +1,12 @@
 # Build
 
+```
 gradle build
+```
 
-# Run Bots
+# Run
 
+```
 gradle runRandomBot
 gradle runUpDownBot
+```
