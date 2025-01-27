@@ -8,8 +8,10 @@ This is a turn based system where you send commands to an API server and then re
 Below is a detailed description of the API, but to get started it would probably be easier to modify an existing example client.
 So far we have example clients for the following languages:
 
-- [Python](python/)
 - [Java](java/)
+- [JavaScript](javascript/)
+- [Python](python/)
+- [Rust](rust/)
 
 If you create a client for another language please send a [PR](https://github.com/richardpenman/dianti-clients/pulls) and I will add it!
 
