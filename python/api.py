@@ -30,7 +30,7 @@ class Simulation:
         bot: str,
         email: str,
         sandbox: bool = False,
-        api_url: str = "https://dianti.de.r.appspot.com/api",
+        api_url: str = "https://dianti.secondspace.dev/api",
     ):
         self.api_url: str = api_url
         self.initial_state: dict = self.api(

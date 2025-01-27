@@ -17,7 +17,7 @@ public class RandomBot {
                 "random-java-bot",
                 "bob@mail.com",
                 true,
-                "https://dianti.de.r.appspot.com/api"
+                "https://dianti.secondspace.dev/api"
         );
         JsonObject currentState = simulation.initialState;
         Random random = new Random();

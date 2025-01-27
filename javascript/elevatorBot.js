@@ -20,7 +20,7 @@ class Command {
 }
 
 class Simulation {
-    constructor(event, buildingName, bot, email, sandbox = false, apiUrl = 'https://dianti.de.r.appspot.com/api') {
+    constructor(event, buildingName, bot, email, sandbox = false, apiUrl = 'https://dianti.secondspace.dev/api') {
         this.event = event;
         this.buildingName = buildingName;
         this.bot = bot;

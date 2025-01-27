@@ -3,7 +3,7 @@ use reqwest::Client;
 use serde::{Deserialize, Serialize};
 use std::collections::HashMap;
 
-const API_URL: &str = "https://dianti.de.r.appspot.com/api";
+const API_URL: &str = "https://dianti.secondspace.dev/api";
 
 #[derive(Serialize, Deserialize, Debug)]
 struct Command {

@@ -18,8 +18,8 @@ public class UpDownBot {
                 "tiny_random",
                 "updown-java-bot",
                 "bob@mail.com",
-                false,
-                "https://dianti.de.r.appspot.com/api"
+                true,
+                "https://dianti.secondspace.dev/api"
         );
         JsonObject currentState = simulation.initialState;
         Map<String, Boolean> directions = new HashMap<>();

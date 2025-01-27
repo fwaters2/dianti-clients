@@ -1,6 +1,6 @@
 # Elevator Challenge Documentation
 
-The [Elevator Challenge](https://dianti.de.r.appspot.com/) requires you to build a bot that efficiently moves elevators to serve passenger requests. 
+The [Elevator Challenge](https://dianti.secondspace.dev/) requires you to build a bot that efficiently moves elevators to serve passenger requests. 
 This is a turn based system where you send commands to an API server and then receive back the subsequent state.
 
 ## Examples
@@ -18,12 +18,12 @@ If you create a client for another language please send a [PR](https://github.co
 ## API
 
 ### Initial Request
-To start a simulation you need to send a JSON request to `https://dianti.de.r.appspot.com/api` with the following fields:
+To start a simulation you need to send a JSON request to `https://dianti.secondspace.dev/api` with the following fields:
 
 | Field | Type | Description |
 | :---- | :--- | :---------- |
 | bot | string | The name of your bot |
-| building\_name | string | The name of the building simulation, which can be selected from [here](https://dianti.de.r.appspot.com/buildings) |
+| building\_name | string | The name of the building simulation, which can be selected from [here](https://dianti.secondspace.dev/buildings) |
 | email | string | Your email (this is used to generate a [Gravatar](https://gravatar.com/) image to show in the high scores) |
 | event | string | The name of the event (this is so each event can have a separate high score board) |
 | sandbox | boolean | If sandbox is set to true then your simulation will not be included in high scores or replays |
@@ -81,7 +81,7 @@ Here is an example response with every possible field:
  "num_floors": 10,
  "num_turns": 30,
  "requests": [{"direction": true, "floor": 2}],
- "replay_url": "https://dianti.de.r.appspot.com/replay/abc123",
+ "replay_url": "https://dianti.secondspace.dev/replay/abc123",
  "running": true,
  "score": 1090,
  "token": "abc123"}
@@ -123,4 +123,4 @@ In the final turn you will receive a score for your simulation based on:
 - How many passengers did not reach their destination by the end of the simulation.
 - The amount of energy used to move elevators.
 
-The highest scoring bots will be displayed on the [high scores](https://dianti.de.r.appspot.com/highscores) page.
+The highest scoring bots will be displayed on the [high scores](https://dianti.secondspace.dev/highscores) page.
