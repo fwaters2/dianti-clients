@@ -3,6 +3,7 @@ package main
 import (
     "bytes"
 	"encoding/json"
+    "flag"
 	"fmt"
 	"math/rand"
 	"net/http"
@@ -156,7 +157,14 @@ func updownBot() {
 }
 
 func main() {
-	// Uncomment the bot you want to run
-	// randomBot()
-	updownBot()
+	run_random_bot := flag.Bool("random", false, "run the random bot")
+	run_updown_bot := flag.Bool("updown", false, "run the updown bot")
+	flag.Parse()
+
+    if *run_random_bot {
+	    randomBot()
+    }
+    if *run_updown_bot {
+        updownBot()
+    }
 }

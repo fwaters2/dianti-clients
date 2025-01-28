@@ -6,7 +6,7 @@ go build
 
 # Run
 
-Uncomment the bot you want then run:
 ```
-./elevator-challenge
+./elevator-challenge --random
+./elevator-challenge --updown
 ```
