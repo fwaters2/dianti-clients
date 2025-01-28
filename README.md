@@ -8,6 +8,7 @@ This is a turn based system where you send commands to an API server and then re
 Below is a detailed description of the API, but to get started it would probably be easier to modify an existing example client.
 So far we have example clients for the following languages:
 
+- [C++](c++/)
 - [Golang](golang/)
 - [Java](java/)
 - [JavaScript](javascript/)
