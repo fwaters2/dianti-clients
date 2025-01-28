@@ -9,6 +9,7 @@ Below is a detailed description of the API, but to get started it would probably
 So far we have example clients for the following languages:
 
 - [C++](c++/)
+- [C#](csharp/)
 - [Golang](golang/)
 - [Java](java/)
 - [JavaScript](javascript/)
