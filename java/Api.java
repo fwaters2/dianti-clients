@@ -37,13 +37,12 @@ public class Api {
     }
 
     public static class Simulation {
-        private final String apiUrl;
+        private static final String API_URL = "https://dianti.secondspace.dev/api";
         public final JsonObject initialState;
         public final int numFloors;
         private int curTurn;
 
-        public Simulation(String event, String buildingName, String bot, String email, boolean sandbox, String apiUrl) {
-            this.apiUrl = apiUrl;
+        public Simulation(String event, String buildingName, String bot, String email, boolean sandbox) {
             JsonObject data = new JsonObject();
             data.addProperty("bot", bot);
             data.addProperty("building_name", buildingName);
@@ -71,7 +70,7 @@ public class Api {
         private JsonObject api(JsonObject data) {
             HttpClient client = HttpClient.newHttpClient();
             HttpRequest request = HttpRequest.newBuilder()
-                    .uri(URI.create(this.apiUrl))
+                    .uri(URI.create(API_URL))
                     .header("Content-Type", "application/json")
                     .POST(HttpRequest.BodyPublishers.ofString(data.toString()))
                     .build();

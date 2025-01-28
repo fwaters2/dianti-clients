@@ -61,7 +61,6 @@ impl Simulation {
 
         // Parse the JSON response
         let response_text = response.text().await?;
-        println!("Initial API Response: {}", response_text);
 
         // Deserialize the initial response into a temporary struct to extract the token and num_floors
         #[derive(Deserialize)]
@@ -113,8 +112,6 @@ impl Simulation {
 
         // Parse the JSON response
         let response_text = response.text().await?;
-        println!("API Response: {}", response_text);
-
         let state: State = serde_json::from_str(&response_text)?;
 
         for error in &state.errors {
