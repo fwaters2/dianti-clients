@@ -1,5 +1,7 @@
 [English Version](https://github.com/richardpenman/dianti-clients)
 
+Chinese translation kindly provided by Zem ❤️
+
 # 電梯挑戰文件
 
 電梯挑戰 [Elevator Challenge](https://dianti.secondspace.dev/) 的目標是要求工程師開發一個高效能的機器人（bot），來模擬電梯運行，並根據乘客的請求來調度電梯，使其以最佳方式運行，以達到最短等待時間和最少移動成本的目標。 🚀
