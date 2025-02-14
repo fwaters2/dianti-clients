@@ -1,3 +1,6 @@
+## [中文電梯挑戰文件 🇹🇼 →](https://github.com/richardpenman/dianti-clients/blob/main/README_TW.md)
+
+
 # Elevator Challenge Documentation
 
 The [Elevator Challenge](https://dianti.secondspace.dev/) requires you to build a bot that efficiently moves elevators to serve passenger requests. 
@@ -49,7 +52,7 @@ If your request is valid then you will receive back a response with a subset of 
 
 | Field | Type | Description | When Returned |
 | :---- | :--- | :---------- | :------------ |
-| cur\_turn | boolean | The current turn number | Every turn |
+| cur\_turn | int | The current turn number | Every turn |
 | elevators | list[[Elevator](#elevator-type)] | The current state of the elevators | Every turn |
 | errors | list[string] | A list of any errors encountered | Every turn |
 | num\_floors | int | The number of floors in this building | The initial turn |
