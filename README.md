@@ -18,6 +18,7 @@ So far we have example clients for the following languages:
 - [JavaScript](javascript/)
 - [Python](python/)
 - [Rust](rust/)
+- [Typescript](typescript/)
 
 If you create a client for another language please send a [PR](https://github.com/richardpenman/dianti-clients/pulls) and I will add it!
 
