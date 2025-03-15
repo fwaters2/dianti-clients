@@ -2,11 +2,6 @@
   "name": "dianti-typescript",
   "version": "1.0.0",
   "description": "TypeScript version of the Dianti elevator challenge",
-  "main": "dist/elevatorBot.js",
-  "scripts": {
-    "build": "tsc",
-    "start": "ts-node"
-  },
   "dependencies": {
     "axios": "^1.6.7"
   },

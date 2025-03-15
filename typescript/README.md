@@ -1,23 +1,22 @@
 # Dianti Elevator Challenge
 
 A TypeScript implementation of the Dianti elevator challenge. Two example bots are included:
-- `randomBot`: Makes random decisions
-- `updownBot`: Moves elevators up and down based on requests
+- `randomBot.ts`: Makes random decisions
+- `updownBot.ts`: Moves elevators up and down based on requests
 
 ## Quick Start
 
-1. Install & build:
+1. Install dependencies:
 ```bash
 npm install
-npm run build
 ```
 
 2. Run a bot:
 ```bash
-npm start
+npx ts-node randomBot.ts
 ```
 
-Edit `src/elevatorBot.ts` to uncomment your preferred bot.
+Create your own bot by copying one of the example files and modifying the logic.
 
 ## Available Buildings
 

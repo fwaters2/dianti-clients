@@ -1,6 +1,6 @@
-import { BuildingName, Direction } from "../../types";
-import { Command, Simulation } from "../api";
-import { DIRECTIONS, ACTIONS } from "../constants";
+import { BuildingName, Direction } from "./types";
+import { Command, Simulation } from "./api";
+import { DIRECTIONS, ACTIONS } from "./constants";
 
 async function updownBot(): Promise<void> {
   const simulation = new Simulation(

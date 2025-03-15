@@ -1,4 +1,4 @@
-import { Direction, Action } from "../types";
+import { Direction, Action } from "./types";
 
 export const DIRECTIONS = {
   UP: true as Direction,

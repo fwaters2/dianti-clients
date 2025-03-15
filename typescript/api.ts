@@ -7,7 +7,7 @@ import {
   Direction,
   Action,
   BuildingName,
-} from "../types";
+} from "./types";
 
 export class Command {
   constructor(

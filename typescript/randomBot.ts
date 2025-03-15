@@ -1,5 +1,5 @@
-import { Command, Simulation } from "../api";
-import { DIRECTIONS, ACTIONS } from "../constants";
+import { Command, Simulation } from "./api";
+import { DIRECTIONS, ACTIONS } from "./constants";
 
 async function randomBot(): Promise<void> {
   const simulation = new Simulation(
