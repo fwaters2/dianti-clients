@@ -1,10 +1,11 @@
 import { Command, Simulation } from "./api";
 import { DIRECTIONS, ACTIONS } from "./constants";
+import { BuildingName } from "./types";
 
 async function randomBot(): Promise<void> {
   const simulation = new Simulation(
     "secondspace2025",
-    "tiny_random",
+    BuildingName.TINY_RANDOM,
     "random-ts-bot",
     "bob@mail.com",
     true
